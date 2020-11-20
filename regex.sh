@@ -7,7 +7,7 @@ echo "#################################"
 echo "First Name : "
 read name
 pat="^[A-Z a-z]{2,}"
-if [[ $name == $pat ]]
+if [[ $name =~ $pat ]]
 then
   echo "$name is valid Name"
 else
@@ -19,7 +19,7 @@ echo "################################"
 echo "Last Name : "
 read name
 pat="^[A-Z a-z]{3,}"
-if [[ $name == $pat ]]
+if [[ $name =~ $pat ]]
 then
   echo "$name is valid Name"
 else
@@ -53,3 +53,16 @@ else
 fi
 
 echo "##################################"
+
+
+echo "Password use case 5 "
+read password
+pat4="^[A-Z]{1}[a-z A-Z]{6,}+[0-9]{1,}+[!@#\$%&\*\^]{1,}+[0-9]{1,}$"
+if [[ $password =~ $pat4]]
+then
+echo "password is valid"
+else
+echo"not a valid password"
+fi
+
+
