@@ -1,12 +1,6 @@
-echo "regex assignment used cases"
-
-
-echo "#################################"
-
-
-echo "First Name : "
+echo "Lasr Name : "
 read name
-pat="^[A-Z a-z]{2,}"
+pat="^[A-Z a-z]{3,}"
 if [[ $name == $pat ]]
 then
   echo "$name is valid Name"
